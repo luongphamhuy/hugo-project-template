@@ -1,6 +1,7 @@
-# Cấu hình Cloud Build
+# Hướng dẫn Chi tiết Cấu hình và Sử dụng Cloud Build cho Dự án Hugo
 
-## 1. Tạo file cloudbuild.yaml
+## 1. Tạo và Cấu hình file cloudbuild.yaml
+
 Tạo file `cloudbuild.yaml` trong thư mục gốc của dự án với nội dung sau:
 
 ```yaml
@@ -25,9 +26,8 @@ substitutions:
 options:
   logging: CLOUD_LOGGING_ONLY
 
-# Cấu hình và Sử dụng Cloud Build
 
-## 1. Cấu hình Trigger trong Cloud Build
+## 2. Cấu hình Trigger trong Cloud Build
 
 ### Bước 1: Truy cập Google Cloud Console
 1. Mở trình duyệt web và truy cập https://console.cloud.google.com/
@@ -47,8 +47,7 @@ options:
 7. Đảm bảo rằng đường dẫn đến file là "/cloudbuild.yaml"
 8. Nhấp "Create" để tạo trigger
 
-## 2. Cấp quyền cho Cloud Build
-
+## 3. Cấp quyền cho Cloud Build
 ### Bước 1: Truy cập IAM & Admin
 1. Trong Google Cloud Console, tìm và nhấp vào "IAM & Admin" trong menu bên trái
 2. Chọn "IAM" từ submenu
@@ -63,7 +62,7 @@ options:
 4. Lặp lại bước 2-3 để thêm "Storage Object Viewer"
 5. Nhấp "Save" để lưu thay đổi
 
-## 3. Thiết lập Biến Môi trường (nếu cần)
+## 4. Thiết lập Biến Môi trường
 
 ### Bước 1: Truy cập Trigger
 1. Quay lại Cloud Build > Triggers
@@ -76,7 +75,7 @@ options:
    - _BUCKET_NAME: tên của Google Cloud Storage bucket
 4. Nhấp "Save" để lưu thay đổi
 
-## 4. Kiểm tra và Theo dõi
+## 5. Kiểm tra và Theo dõi
 
 ### Bước 1: Push thay đổi lên GitHub
 1. Thực hiện một thay đổi nhỏ trong repository
@@ -91,7 +90,7 @@ options:
 1. Sau khi build hoàn tất, truy cập URL của website của bạn
 2. Xác nhận rằng các thay đổi đã được áp dụng
 
-## 5. Cấu hình Notifications (tùy chọn)
+## 6. Cấu hình Notifications (tùy chọn)
 
 ### Bước 1: Thiết lập Pub/Sub topic
 1. Trong Google Cloud Console, đi đến Pub/Sub
@@ -105,4 +104,3 @@ options:
 1. Sử dụng Cloud Functions hoặc một dịch vụ khác để đăng ký vào Pub/Sub topic
 2. Cấu hình để gửi thông báo qua email hoặc Slack khi nhận được message từ topic
 
-Với hướng dẫn chi tiết này, bạn có thể thực hiện từng bước một để cấu hình Cloud Build cho dự án Hugo của mình.
