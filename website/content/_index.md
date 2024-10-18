@@ -1,15 +1,15 @@
 ---
-title: "Welcome to My Hugo Site"
-description: "This is a sample Hugo website"
+title: "Welcome to My Hugo Demo Site"
+date: 2024-10-18
+draft: false
 ---
 
-# Welcome to My Hugo Site
+# Welcome to My Hugo Demo Site
 
-This is a sample homepage for our Hugo-powered website. Here you can add any content you like, such as:
+This is a demonstration of a Hugo-powered website deployed on Google Cloud Platform.
 
-- An introduction to your project
-- Links to important documentation
-- Recent updates or news
-- Team information
+## Featured Posts
+- [First Blog Post](/posts/first-post)
+- [About Our Project](/about)
 
-Feel free to customize this page to fit your project's needs!
+[Learn more about our services](/services)
