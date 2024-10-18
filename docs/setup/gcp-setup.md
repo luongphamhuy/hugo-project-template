@@ -57,18 +57,23 @@ Quan trọng: Giữ file key JSON an toàn và không chia sẻ nó công khai.
 5. Đặt "Not found page" là "404.html" (nếu có).
 6. Lưu cấu hình.
 
+
 ### 4c. Cấu hình CORS (nếu cần)
+
 CORS (Cross-Origin Resource Sharing) là một cơ chế bảo mật cho phép hoặc hạn chế các tài nguyên web được yêu cầu từ một domain khác với domain đang phục vụ trang web. Cấu hình CORS trong Cloud Storage có những tác dụng sau:
 
-Cho phép truy cập từ các domain khác.
-Tăng tính linh hoạt cho ứng dụng.
-Hỗ trợ cho API và Microservices.
-Kiểm soát bảo mật.
+1. Cho phép truy cập từ các domain khác.
+2. Tăng tính linh hoạt cho ứng dụng.
+3. Hỗ trợ cho API và Microservices.
+4. Kiểm soát bảo mật.
+
 Để cấu hình CORS:
 
-Trong Cloud Storage, chọn bucket của bạn.
-Đi tới tab "CORS configuration".
-Thêm cấu hình CORS phù hợp với nhu cầu của bạn, ví dụ:
+1. Trong Cloud Storage, chọn bucket của bạn.
+2. Đi tới tab "CORS configuration".
+3. Thêm cấu hình CORS phù hợp với nhu cầu của bạn, ví dụ:
+
+```json
 [
   {
     "origin": ["*"],
@@ -77,7 +82,9 @@ Thêm cấu hình CORS phù hợp với nhu cầu của bạn, ví dụ:
     "maxAgeSeconds": 3600
   }
 ]
-Lưu cấu hình.
+
+4.Lưu cấu hình.
+
 Giải thích cấu hình mẫu:
 
 "origin": ["*"]: Cho phép tất cả các domain truy cập.
@@ -85,7 +92,6 @@ Giải thích cấu hình mẫu:
 "responseHeader": ["Content-Type"]: Cho phép client đọc header Content-Type từ response.
 "maxAgeSeconds": 3600: Kết quả của preflight request có thể được cache trong 1 giờ.
 Lưu ý: Cấu hình này khá mở. Trong môi trường sản xuất, bạn nên cân nhắc giới hạn origin chỉ cho các domain cụ thể mà bạn muốn cho phép.
-
 
 
 ## 5. Cấu hình Cloud DNS (nếu sử dụng custom domain)
