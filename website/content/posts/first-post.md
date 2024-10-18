@@ -1,19 +1,19 @@
 ---
-title: "My First Post"
-date: 2024-10-18T14:30:00+07:00
+title: "Our First Blog Post"
+date: 2024-10-18
 draft: false
 ---
 
-This is my first post on this Hugo site. 
+# Our First Blog Post
 
-Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.
+Welcome to our blog! This is our first post demonstrating the blogging capabilities of our Hugo-powered website.
 
-## Some features of Hugo:
+## Key Features of Our Setup
 
-1. Extremely fast build times
-2. Multilingual support
-3. Integrated Sass processing
-4. Shortcodes
-5. Dynamic API-driven content
+1. Fast static site generation with Hugo
+2. Seamless deployment to Google Cloud Storage
+3. Scalable and cost-effective hosting
+4. Easy content management through Git
 
-Stay tuned for more posts about using Hugo and managing documentation!
+Stay tuned for more updates and tech insights!
+
